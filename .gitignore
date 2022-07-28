@@ -5,3 +5,4 @@ ui/build
 ui/node_modules
 ui/.gitignore
 core/target
+.idea
