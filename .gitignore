@@ -1,0 +1,6 @@
+core/.mvn
+core/.gitignore
+core/.idea
+ui/build
+ui/node_modules
+ui/.gitignore

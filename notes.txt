@@ -1,0 +1,6 @@
+--TODO
+create .gitignore on root folder
+connect frontend -> backend
+setup redux
+setup database
+setup webpack
