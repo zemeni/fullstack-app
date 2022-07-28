@@ -12,6 +12,6 @@ public class TestController {
     @GetMapping
     @CrossOrigin
     public String test(){
-        return "test";
+        return "response from backend";
     }
 }
