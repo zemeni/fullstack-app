@@ -4,3 +4,21 @@ connect frontend -> backend
 setup redux
 setup database
 setup webpack
+
+--checking java home
+##JAVA HOME
+java -XshowSettings:properties -version 2>&1 > /dev/null | grep 'java.home'  => /usr/lib/jvm/java-17-openjdk-amd64
+##Tomcat HOME
+/opt/tomcat9/apache-tomcat-9.0.50
+
+--installing tomcat9 in ubuntu
+copy tomcat.tar.gz in /opt/tomcat9 folder
+sudo tar xvzf apache-tomcat-v9.*
+vi ~/.bashrc
+export JAVA_HOME=/usr/lib/jvm/java-17*
+export CATALINA_HOME=/opt/tomcat9/apache-tomcat9
+
+--start tomcat
+inside tomcat/bin => sh startup.sh
+deploy ROOT.war to webapps
+curl -v http://localhost:8080/test
