@@ -16,9 +16,17 @@ public class Room {
 
     public Room() {}
 
+    public Room(String location) {
+        this.location = location;
+    }
+
     public Room(int Id, String location) {
         this.Id = Id;
         this.location = location;
+    }
+
+    public int getId() {
+        return Id;
     }
 
     public String getLocation() {
