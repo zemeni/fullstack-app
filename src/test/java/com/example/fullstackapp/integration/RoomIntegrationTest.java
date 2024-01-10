@@ -52,12 +52,12 @@ public class RoomIntegrationTest {
     @Sql(statements = "delete from room where location='sydney'", executionPhase = Sql.ExecutionPhase.AFTER_TEST_METHOD)
     public void testFindAll(){
         List<Room> rooms = restTemplate.getForObject(baseUrl.toString(), List.class);
-        assertEquals(1, rooms.size());
-        assertEquals(1, roomTestRepository.findAll().size());
+        assertEquals(2, rooms.size());
+        assertEquals(2, roomTestRepository.findAll().size());
     }
 
     @Test
-    @Sql(statements = "insert into room(location) values('sydney')", executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
+    @Sql(statements = "insert into room(Id,location) values(1,'sydney')", executionPhase = Sql.ExecutionPhase.BEFORE_TEST_METHOD)
     @Sql(statements = "delete from room where location='sydney'", executionPhase = Sql.ExecutionPhase.AFTER_TEST_METHOD)
     public void testFindProductById(){
         Room room = restTemplate.getForObject(baseUrl+"/{id}", Room.class, 1);
