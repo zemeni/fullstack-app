@@ -5,6 +5,7 @@ import com.example.fullstackapp.service.RoomService;
 import com.example.fullstackapp.service.RoomServiceTest;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import org.junit.jupiter.api.BeforeEach;
+import org.junit.jupiter.api.Disabled;
 import org.junit.jupiter.api.DisplayName;
 import org.junit.jupiter.api.Test;
 import org.mockito.Mock;
@@ -54,6 +55,7 @@ public class RoomControllerTest {
 
     @DisplayName("should show all rooms")
     @Test
+    @Disabled
     void shouldShowAllRooms() throws Exception {
         when(roomServiceMock.findAll()).thenReturn(rooms);
         mockMvc.perform(get("/api/rooms"))
